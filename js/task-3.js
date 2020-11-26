@@ -18,14 +18,6 @@ const images = [
 
 const galleryRef = document.getElementById('gallery')
 console.dir(galleryRef)
-// galleryRef.insertAdjacentHTML
-// images.map(el => { 
-//     let createImg = document.createElement('img')
-//     createImg.url = el.url
-//     createImg.alt = el.alt
-//     console.dir(createImg)
-//     galleryRef.insertAdjacentHTML('afterbegin' 'createImg')
-// })
 const createGallery = ({ url, alt }) => { 
     return `<li style="display:inline"> 
     <img src="${url}" alt="${alt}" width="120">  
