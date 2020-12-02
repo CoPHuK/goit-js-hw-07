@@ -2,7 +2,11 @@ const inputRef = document.getElementById("validation-input");
 // console.log(inputRef);
 // console.log(inputRef.dataset.length);
 
-const fun = function () {
+
+inputRef.addEventListener("blur", validation);
+
+
+function validation () {
   let msgLenght = inputRef.value.length;
   let msgLengthValid = Number(inputRef.dataset.length);
   //   console.log(msgLenght);
@@ -15,4 +19,3 @@ const fun = function () {
     ? (inputRef.classList.add("valid"), inputRef.classList.remove("invalid"))
     : (inputRef.classList.add("invalid"), inputRef.classList.remove(valid));
 };
-inputRef.addEventListener("blur", fun);
