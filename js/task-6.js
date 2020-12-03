@@ -14,13 +14,6 @@ function validation () {
     return;
   }
   msgLenght === msgLengthValid
-    ? (inputRef.classList.add("valid"), remooving('invalid'))
-    : (inputRef.classList.add("invalid"), remooving('valid'));
+    ? (inputRef.classList.add("valid"), inputRef.classList.remove("invalid"))
+    : (inputRef.classList.add("invalid"), inputRef.classList.remove("valid"));
 };
-
-function remooving(clas) 
-{
-  if (inputRef.classList.contains(clas)) { 
-    inputRef.classList.remove(clas)
-  }
- }
