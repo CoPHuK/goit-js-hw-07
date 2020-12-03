@@ -4,8 +4,6 @@ const inputRef = document.getElementById("validation-input");
 
 
 inputRef.addEventListener("blur", validation);
-
-
 function validation () {
   let msgLenght = inputRef.value.length;
   let msgLengthValid = Number(inputRef.dataset.length);
@@ -16,6 +14,13 @@ function validation () {
     return;
   }
   msgLenght === msgLengthValid
-    ? (inputRef.classList.add("valid"), inputRef.classList.remove("invalid"))
-    : (inputRef.classList.add("invalid"), inputRef.classList.remove(valid));
+    ? (inputRef.classList.add("valid"), remooving('invalid'))
+    : (inputRef.classList.add("invalid"), remooving('valid'));
 };
+
+function remooving(clas) 
+{
+  if (inputRef.classList.contains(clas)) { 
+    inputRef.classList.remove(clas)
+  }
+ }
